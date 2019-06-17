@@ -13,7 +13,7 @@ BaseToolCmd = 'java -jar baksmali.jar d '
 # sdk feature
 umengStr = "com.umeng"
 JGuangStr = "JAnalyticsInterface"
-getuiStr = "getui"  # com.igexin.sdk.GTIntentService,com.igexin.sdk.PushManager，com.igexin.sdk.PushService
+getuiStr = "getui"
 talkingDataStr = "TCAgent"
 MobSDKStr = "MobSDK"
 duSDKStr = "cn\shuzilm\core"
@@ -227,7 +227,7 @@ def searchSDK():
 # 查找 umengsdk
 def searchUmengSDK():
   filelistlog = "D:\\work\\UmengSDKReport.txt"  # 保存文件路径
-  strLine = "<================================ SDK 集成情况 ================================>"
+  strLine = "<================================ 友盟 SDK 集成情况 ================================>"
   try:
     with open(filelistlog, 'a+') as fo:
       fo.write('\n')
@@ -253,7 +253,7 @@ def searchUmengSDK():
 # 查找极光 SDK
 def searchJPushSDK():
   filelistlog = "D:\\work\\JPushSDKReport.txt"  # 保存文件路径
-  strLine = "<================================ SDK 集成情况 ================================>"
+  strLine = "<================================ 极光 SDK 集成情况 ================================>"
   try:
     with open(filelistlog, 'a+') as fo:
       fo.write('\n')
@@ -278,7 +278,7 @@ def searchJPushSDK():
 # 查找个推 SDK
 def searchGeTuiSDK():
   filelistlog = "D:\\work\\GeTuiSDKReport.txt"  # 保存文件路径
-  strLine = "<================================ SDK 集成情况 ================================>"
+  strLine = "<================================ 个推 SDK 集成情况 ================================>"
   try:
     with open(filelistlog, 'a+') as fo:
       fo.write('\n')
@@ -303,7 +303,7 @@ def searchGeTuiSDK():
 # 查找 MobSDK
 def searchMobSDK():
   filelistlog = "D:\\work\\MobSDKReport.txt"  # 保存文件路径
-  strLine = "<================================ SDK 集成情况 ================================>"
+  strLine = "<================================ Mob SDK 集成情况 ================================>"
   try:
     with open(filelistlog, 'a+') as fo:
       fo.write('\n')
@@ -328,7 +328,7 @@ def searchMobSDK():
 # 查找 TalkingData SDK
 def searchTDSDK():
   filelistlog = "D:\\work\\TDSDKReport.txt"  # 保存文件路径
-  strLine = "<================================ SDK 集成情况 ================================>"
+  strLine = "<================================ TalkingData SDK 集成情况 ================================>"
   try:
     with open(filelistlog, 'a+') as fo:
       fo.write('\n')
@@ -353,7 +353,7 @@ def searchTDSDK():
 # 查找 DU SDK
 def searchDUSDK():
   filelistlog = "D:\\work\\DUSDKReport.txt"  # 保存文件路径
-  strLine = "<================================ SDK 集成情况 ================================>"
+  strLine = "<================================ 数盟 SDK 集成情况 ================================>"
   try:
     with open(filelistlog, 'a+') as fo:
       fo.write('\n')
@@ -382,7 +382,7 @@ def searchDUSDK():
 # 查找数美 SDK
 def searchSMSDK():
   filelistlog = "D:\\work\\smSDKReport.txt"  # 保存文件路径
-  strLine = "<================================ SDK 集成情况 ================================>"
+  strLine = "<================================ 数美 SDK 集成情况 ================================>"
   try:
     with open(filelistlog, 'a+') as fo:
       fo.write('\n')
@@ -407,7 +407,7 @@ def searchSMSDK():
 # 查找易观方舟 SDK
 def searchYGSDK():
   filelistlog = "D:\\work\\ygSDKReport.txt"  # 保存文件路径
-  strLine = "<================================ SDK 集成情况 ================================>"
+  strLine = "<================================ 易观方舟 SDK 集成情况 ================================>"
   try:
     with open(filelistlog, 'a+') as fo:
       fo.write('\n')
@@ -432,7 +432,7 @@ def searchYGSDK():
 # 查找网易易盾 SDK
 def searchWYSDK():
   filelistlog = "D:\\work\\wySDKReport.txt"  # 保存文件路径
-  strLine = "<================================ SDK 集成情况 ================================>"
+  strLine = "<================================ 网易易盾 SDK 集成情况 ================================>"
   try:
     with open(filelistlog, 'a+') as fo:
       fo.write('\n')
@@ -457,7 +457,7 @@ def searchWYSDK():
 # 查找顶象 SDK
 def searchDXSDK():
   filelistlog = "D:\\work\\DXSDKReport.txt"  # 保存文件路径
-  strLine = "<================================ SDK 集成情况 ================================>"
+  strLine = "<================================ 顶象 SDK 集成情况 ================================>"
   try:
     with open(filelistlog, 'a+') as fo:
       fo.write('\n')
@@ -487,7 +487,6 @@ def main():
   for filename in os.listdir(pathsour):
     decompression(filename, pathsour, pathsour)
   # 查找 apk 所集成的 SDK
-  # searchSDK()
   searchUmengSDK()
   searchJPushSDK()
   searchTDSDK()
