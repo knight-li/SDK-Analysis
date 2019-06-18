@@ -3,10 +3,9 @@ import os
 import zipfile
 
 # 操作路径
-# 设定文件路径
-pathsour = 'D:\\MyProgects\\Python\\SdkAnalysis\\apk\\'
+pathsour = 'D:\\My\\Python\\SDK-Analysis\\apk\\'
 # baksmali.jar
-baksmali = 'D:\\MyProgects\\Python\\SdkAnalysis\\baksmali.jar'
+baksmali = 'D:\\My\\Python\\SDK-Analysis\\baksmali.jar'
 # 解析dex的基础命令
 BaseToolCmd = 'java -jar baksmali.jar d '
 
@@ -87,62 +86,8 @@ def checkSDKFeature(Path, fname, appName):
   mPath = Path + fname + "\\"
   print(" checkSDKFuture ====> ", mPath)
   os.chdir(mPath)  # 切换到工作路径
-  # 遍历查找
-  filelistlog = "D:\\My\\Python\\SdkAnalysis\\filelistlog.txt"  # 保存文件路径
-  strLine = "<================================" + appName + "================================>"
-  try:
-    with open(filelistlog, 'a+') as fo:
-      fo.writelines(strLine)
-      fo.write('\n')
-  except:
-    pass  # 所以异常全部忽略即可
-
-  for maindir, subdir, file_name_list in os.walk(pathsour + appName + "\\"):
-    for filename in file_name_list:
-
-      apath = os.path.join(maindir, filename)
-      if umengStr in apath or 'UMConfigure' in apath or 'MobclickAgent' in apath:
-        print("umeng SDK ====> ", apath)
-        try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines(apath)
-            fo.write('\n')
-        except:
-          pass  # 所以异常全部忽略即可
-
-      if JGuangStr in apath or "libjcore" in apath or "JPushInterface" in apath:
-        print("JAnalytic SDK ====> ", apath)
-        try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines(apath)
-            fo.write('\n')
-        except:
-          pass  # 所以异常全部忽略即可
-
-      if getuiStr in apath:
-        print("getui SDK ====> ", apath)
-        try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines(apath)
-            fo.write('\n')
-        except:
-          pass  # 所以异常全部忽略即可
-      if talkingDataStr in apath:
-        print("talkingData SDK ====> ", apath)
-        try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines(apath)
-            fo.write('\n')
-        except:
-          pass  # 所以异常全部忽略即可
-      if MobSDKStr in apath or "com\mob\MobApplication":
-        print("Mob SDK ====> ", apath)
-        try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines(apath)
-            fo.write('\n')
-        except:
-          pass  # 所以异常全部忽略即可
+  # 查找是否包含SDK
+  searchSDK()
 
   os.chdir(Path)  # 完成之后切换到反编译路劲下
 
@@ -156,80 +101,12 @@ def copyBaksmaliToDir(pathtar):
   os.system(cmdComand)
 
 
-# 已经解析过的文件，只遍历查找
-def searchSDK():
-  filelistlog = "D:\\work\\filelistlog.txt"  # 保存文件路径
-  strLine = "<================================ SDK 集成情况 ================================>"
-  try:
-    with open(filelistlog, 'a+') as fo:
-      fo.write('\n')
-      fo.write('\n')
-      fo.writelines(strLine)
-      fo.write('\n')
-  except:
-    pass  # 所以异常全部忽略即可
-  for maindir, subdir, file_name_list in os.walk(pathsour):
-    for filename in file_name_list:
-
-      apath = os.path.join(maindir, filename)
-      if umengStr in apath or 'UMConfigure' in apath or 'MobclickAgent' in apath:
-        print("umeng SDK ====> ", apath)
-        try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines("umeng SDK ====> " + apath)
-            fo.write('\n')
-        except:
-          pass  # 所以异常全部忽略即可
-
-      if JGuangStr in apath or "libjcore" in apath or "JPushInterface" in apath or "libjpush" in apath:
-        print("JAnalytic SDK ====> ", apath)
-        try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines("JAnalytic SDK ====> " + apath)
-            fo.write('\n')
-        except:
-          pass  # 所以异常全部忽略即可
-
-      if getuiStr in apath:
-        print("getui SDK ====> ", apath)
-        try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines("getui SDK ====> " + apath)
-            fo.write('\n')
-        except:
-          pass  # 所以异常全部忽略即可
-      if talkingDataStr in apath:
-        print("talkingData SDK ====> ", apath)
-        try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines("talkingData SDK ====> " + apath)
-            fo.write('\n')
-        except:
-          pass  # 所以异常全部忽略即可
-      if MobSDKStr in apath:
-        print("Mob SDK ====> ", apath)
-        try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines("Mob SDK ====> " + apath)
-            fo.write('\n')
-        except:
-          pass  # 所以异常全部忽略即可
-      if duSDKStr in apath or "libdu.so" in apath:
-        print("duSDKStr SDK ====> ", apath)
-        try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines("duSDKStr SDK ====> " + apath)
-            fo.write('\n')
-        except:
-          pass  # 所以异常全部忽略即可
-
-
 # 查找 umengsdk
 def searchUmengSDK():
-  filelistlog = "D:\\work\\UmengSDKReport.txt"  # 保存文件路径
+  reportPath = "D:\\My\\Python\\SDK-Analysis\\logout\\UmengSDKReport.txt"  # 保存文件路径
   strLine = "<================================ 友盟 SDK 集成情况 ================================>"
   try:
-    with open(filelistlog, 'a+') as fo:
+    with open(reportPath, 'a+') as fo:
       fo.write('\n')
       fo.write('\n')
       fo.writelines(strLine)
@@ -241,10 +118,11 @@ def searchUmengSDK():
 
       apath = os.path.join(maindir, filename)
       if umengStr in apath or 'UMConfigure' in apath or 'MobclickAgent' in apath or "com\\umeng" in apath:
+        print("filename ====> ", filename)
         print("umeng SDK ====> ", apath)
         try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines("umeng SDK ====> " + apath)
+          with open(reportPath, 'a+') as fo:
+            fo.writelines("app name ====> " + apath.split('\\')[5])
             fo.write('\n')
         except:
           pass  # 所以异常全部忽略即可
@@ -252,10 +130,10 @@ def searchUmengSDK():
 
 # 查找极光 SDK
 def searchJPushSDK():
-  filelistlog = "D:\\work\\JPushSDKReport.txt"  # 保存文件路径
+  reportPath = "D:\\My\\Python\\SDK-Analysis\\logout\\JPushSDKReport.txt"  # 保存文件路径
   strLine = "<================================ 极光 SDK 集成情况 ================================>"
   try:
-    with open(filelistlog, 'a+') as fo:
+    with open(reportPath, 'a+') as fo:
       fo.write('\n')
       fo.write('\n')
       fo.writelines(strLine)
@@ -268,8 +146,8 @@ def searchJPushSDK():
       if JGuangStr in apath or "libjcore" in apath or "JPushInterface" in apath or "libjpush" in apath:
         print("JAnalytic SDK ====> ", apath)
         try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines("JAnalytic SDK ====> " + apath)
+          with open(reportPath, 'a+') as fo:
+            fo.writelines("app name ====> " + apath.split('\\')[5])
             fo.write('\n')
         except:
           pass  # 所以异常全部忽略即可
@@ -277,10 +155,10 @@ def searchJPushSDK():
 
 # 查找个推 SDK
 def searchGeTuiSDK():
-  filelistlog = "D:\\work\\GeTuiSDKReport.txt"  # 保存文件路径
+  reportPath = "D:\\My\\Python\\SDK-Analysis\\logout\\GeTuiSDKReport.txt"  # 保存文件路径
   strLine = "<================================ 个推 SDK 集成情况 ================================>"
   try:
-    with open(filelistlog, 'a+') as fo:
+    with open(reportPath, 'a+') as fo:
       fo.write('\n')
       fo.write('\n')
       fo.writelines(strLine)
@@ -293,8 +171,8 @@ def searchGeTuiSDK():
       if getuiStr in apath:
         print("getui SDK ====> ", apath)
         try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines("getui SDK ====> " + apath)
+          with open(reportPath, 'a+') as fo:
+            fo.writelines("app name  ====> " + apath)
             fo.write('\n')
         except:
           pass  # 所以异常全部忽略即可
@@ -302,10 +180,10 @@ def searchGeTuiSDK():
 
 # 查找 MobSDK
 def searchMobSDK():
-  filelistlog = "D:\\work\\MobSDKReport.txt"  # 保存文件路径
+  reportPath = "D:\\My\\Python\\SDK-Analysis\\logout\\MobSDKReport.txt"  # 保存文件路径
   strLine = "<================================ Mob SDK 集成情况 ================================>"
   try:
-    with open(filelistlog, 'a+') as fo:
+    with open(reportPath, 'a+') as fo:
       fo.write('\n')
       fo.write('\n')
       fo.writelines(strLine)
@@ -318,8 +196,8 @@ def searchMobSDK():
       if MobSDKStr in apath:
         print("Mob SDK ====> ", apath)
         try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines("Mob SDK ====> " + apath)
+          with open(reportPath, 'a+') as fo:
+            fo.writelines("app name  ====> " + apath)
             fo.write('\n')
         except:
           pass  # 所以异常全部忽略即可
@@ -327,10 +205,10 @@ def searchMobSDK():
 
 # 查找 TalkingData SDK
 def searchTDSDK():
-  filelistlog = "D:\\work\\TDSDKReport.txt"  # 保存文件路径
+  reportPath = "D:\\My\\Python\\SDK-Analysis\\logout\\TDSDKReport.txt"  # 保存文件路径
   strLine = "<================================ TalkingData SDK 集成情况 ================================>"
   try:
-    with open(filelistlog, 'a+') as fo:
+    with open(reportPath, 'a+') as fo:
       fo.write('\n')
       fo.write('\n')
       fo.writelines(strLine)
@@ -343,8 +221,8 @@ def searchTDSDK():
       if talkingDataStr in apath:
         print("talkingData SDK ====> ", apath)
         try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines("talkingData SDK ====> " + apath)
+          with open(reportPath, 'a+') as fo:
+            fo.writelines("app name ====> " + apath.split('\\')[5])
             fo.write('\n')
         except:
           pass  # 所以异常全部忽略即可
@@ -352,10 +230,10 @@ def searchTDSDK():
 
 # 查找 DU SDK
 def searchDUSDK():
-  filelistlog = "D:\\work\\DUSDKReport.txt"  # 保存文件路径
+  reportPath = "D:\\My\\Python\\SDK-Analysis\\logout\\DUSDKReport.txt"  # 保存文件路径
   strLine = "<================================ 数盟 SDK 集成情况 ================================>"
   try:
-    with open(filelistlog, 'a+') as fo:
+    with open(reportPath, 'a+') as fo:
       fo.write('\n')
       fo.write('\n')
       fo.writelines(strLine)
@@ -372,8 +250,8 @@ def searchDUSDK():
       if duSDKStr in apath:
         print("duSDKStr SDK ====> ", apath)
         try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines("duSDKStr SDK ====> " + apath)
+          with open(reportPath, 'a+') as fo:
+            fo.writelines("app name ====> " + apath.split('\\')[5])
             fo.write('\n')
         except:
           pass  # 所以异常全部忽略即可
@@ -381,10 +259,10 @@ def searchDUSDK():
 
 # 查找数美 SDK
 def searchSMSDK():
-  filelistlog = "D:\\work\\smSDKReport.txt"  # 保存文件路径
+  reportPath = "D:\\My\\Python\\SDK-Analysis\\logout\\smSDKReport.txt"  # 保存文件路径
   strLine = "<================================ 数美 SDK 集成情况 ================================>"
   try:
-    with open(filelistlog, 'a+') as fo:
+    with open(reportPath, 'a+') as fo:
       fo.write('\n')
       fo.write('\n')
       fo.writelines(strLine)
@@ -397,8 +275,8 @@ def searchSMSDK():
       if smSDKStr in apath or "libsmsdk.so" in apath or "shumei" in apath:
         print("smSDKStr SDK ====> ", apath)
         try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines("smSDKStr SDK ====> " + apath)
+          with open(reportPath, 'a+') as fo:
+            fo.writelines("app name ====> " + apath.split('\\')[5])
             fo.write('\n')
         except:
           pass  # 所以异常全部忽略即可
@@ -406,10 +284,10 @@ def searchSMSDK():
 
 # 查找易观方舟 SDK
 def searchYGSDK():
-  filelistlog = "D:\\work\\ygSDKReport.txt"  # 保存文件路径
+  reportPath = "D:\\My\\Python\\SDK-Analysis\\logout\\ygSDKReport.txt"  # 保存文件路径
   strLine = "<================================ 易观方舟 SDK 集成情况 ================================>"
   try:
-    with open(filelistlog, 'a+') as fo:
+    with open(reportPath, 'a+') as fo:
       fo.write('\n')
       fo.write('\n')
       fo.writelines(strLine)
@@ -422,8 +300,8 @@ def searchYGSDK():
       if ygSDKStr in apath:
         print("ygSDKStr SDK ====> ", apath)
         try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines("ygSDKStr SDK ====> " + apath)
+          with open(reportPath, 'a+') as fo:
+            fo.writelines("app name ====> " + apath.split('\\')[5])
             fo.write('\n')
         except:
           pass  # 所以异常全部忽略即可
@@ -431,10 +309,10 @@ def searchYGSDK():
 
 # 查找网易易盾 SDK
 def searchWYSDK():
-  filelistlog = "D:\\work\\wySDKReport.txt"  # 保存文件路径
+  reportPath = "D:\\My\\Python\\SDK-Analysis\\logout\\wySDKReport.txt"  # 保存文件路径
   strLine = "<================================ 网易易盾 SDK 集成情况 ================================>"
   try:
-    with open(filelistlog, 'a+') as fo:
+    with open(reportPath, 'a+') as fo:
       fo.write('\n')
       fo.write('\n')
       fo.writelines(strLine)
@@ -447,46 +325,15 @@ def searchWYSDK():
       if wangyiStr in apath:
         print("wangyiSDKStr SDK ====> ", apath)
         try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines("wangyiSDKStr SDK ====> " + apath)
+          with open(reportPath, 'a+') as fo:
+            fo.writelines("app name ====> " + apath.split('\\')[5])
             fo.write('\n')
         except:
           pass  # 所以异常全部忽略即可
 
 
-# 查找顶象 SDK
-def searchDXSDK():
-  filelistlog = "D:\\work\\DXSDKReport.txt"  # 保存文件路径
-  strLine = "<================================ 顶象 SDK 集成情况 ================================>"
-  try:
-    with open(filelistlog, 'a+') as fo:
-      fo.write('\n')
-      fo.write('\n')
-      fo.writelines(strLine)
-      fo.write('\n')
-  except:
-    pass  # 所以异常全部忽略即可
-  for maindir, subdir, file_name_list in os.walk(pathsour):
-    for filename in file_name_list:
-      apath = os.path.join(maindir, filename)
-      if "libDXCaptcha" in apath or "libDXRisk":
-        print("DXSDKStr SDK ====> ", apath)
-        try:
-          with open(filelistlog, 'a+') as fo:
-            fo.writelines("DXSDK SDK ====> " + apath)
-            fo.write('\n')
-        except:
-          pass  # 所以异常全部忽略即可
-
-
-def main():
-  global pathsour
-  # 先改变后缀为.zip
-  changename(pathsour)
-  # 解压 .zip 文件
-  for filename in os.listdir(pathsour):
-    decompression(filename, pathsour, pathsour)
-  # 查找 apk 所集成的 SDK
+# 查找 apk 所集成的 SDK
+def searchSDK():
   searchUmengSDK()
   searchJPushSDK()
   searchTDSDK()
@@ -496,7 +343,17 @@ def main():
   searchSMSDK()
   searchMobSDK()
   searchWYSDK()
-  searchDXSDK()
+
+
+def main():
+  global pathsour
+  # 先改变后缀为.zip
+  changename(pathsour)
+  # 解压 .zip 文件
+  for filename in os.listdir(pathsour):
+    decompression(filename, pathsour, pathsour)
+
+  searchSDK()
 
 
 if __name__ == '__main__':

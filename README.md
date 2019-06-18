@@ -6,7 +6,9 @@
 
 ## 支持功能
 
-- 加压 apk 文件
+目前支持 8 家 SDK 的检测：数盟，数美，极光，友盟，Mob，TalkingData，网易易盾，易观方舟；具体步骤：
+
+- 解压 apk 文件
 - 通过 baksmali 解压 dex文件
 - 查找 apk 中所需要的 SDK集成情况，并打印结果
 
@@ -27,7 +29,22 @@
 3. 根据自身情况修改输出文件路径，本示例如下：
 
    ```Python
-   filelistlog = "D:\\work\\DXSDKReport.txt"
+   reportPath = "D:\\MyProgects\\Python\SdkAnalysis\\logout\\UmengSDKReport.txt"
+   ```
+
+4. 总结要查找的 SDK 的特征值：
+
+   ```Python
+   # sdk feature
+   umengStr = "com.umeng"
+   JGuangStr = "JAnalyticsInterface"
+   getuiStr = "getui"
+   talkingDataStr = "TCAgent"
+   MobSDKStr = "MobSDK"
+   duSDKStr = "cn\shuzilm\core"
+   smSDKStr = "SmAntiFraud"
+   ygSDKStr = "AnalysysAgent"
+   wangyiStr = "watchman"
    ```
 
 至此，我们可以开启 apk 解析之旅了，启动项目。
@@ -38,20 +55,20 @@
 
 ![1560767808636](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1560767808636.png)
 
-以 MobSDKReport 为例，内部结构如下：
+以 DUSDKReport 为例，内部结构如下：
 
 ```
-<================================ SDK 集成情况 ================================>
-Mob SDK ====> D:\work\\JingpinAnalysis\apk\com.kuaikan.comic_5.40.0_540000\classes\com\mob\MobSDK.smali
-Mob SDK ====> D:\work\\JingpinAnalysis\apk\com.kuaikan.comic_5.40.0_540000\classes3\com\mob\MobSDK$1.smali
-Mob SDK ====> D:\work\\JingpinAnalysis\apk\com.kuaikan.comic_5.40.0_540000\classes3\com\mob\MobSDK$2.smali
-Mob SDK ====> D:\work\\JingpinAnalysis\apk\com.kuaikan.comic_5.40.0_540000\classes3\com\mob\MobSDK$3.smali
-Mob SDK ====> D:\work\\JingpinAnalysis\apk\com.kuaikan.comic_5.40.0_540000\classes3\com\mob\MobSDK$4.smali
-Mob SDK ====> D:\work\\JingpinAnalysis\apk\com.kuaikan.comic_5.40.0_540000\classes3\com\mob\MobSDKLog$1.smali
+<=================== 数盟 SDK 集成情况 ===================>
+app name ====> com.kuaikan.comic_5.40.0_540000
+app name ====> com.kuaikan.comic_5.40.0_540000
+app name ====> com.kuaikan.comic_5.40.0_540000
+app name ====> com.kuaikan.comic_5.40.0_540000
 ```
 
 可根据自身需求修改输出格式。
 
 ## 注意
 
-由于  baksmali 在解包的时候速度会稍微慢一下，请耐心点。
+- 由于  baksmali 在解包的时候速度会稍微慢一下，请耐心点;
+- 由于解包后的文件比较大，记得及时清理
+

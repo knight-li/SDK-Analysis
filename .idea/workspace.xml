@@ -12,41 +12,149 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/SDK_Analysis$main_1.coverage" NAME="main_1 Coverage Results" MODIFIED="1560848307855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/SDK_Analysis$main.coverage" NAME="main Coverage Results" MODIFIED="1560858988605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/SDK_Analysis$analysis_sdk_1.coverage" NAME="analysis_sdk_1 Coverage Results" MODIFIED="1560850225730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="478722484">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="1" />
+          <entry key="PLAIN_TEXT" value="28" />
+          <entry key="Python" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="51" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="390" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="84" column="13" lean-forward="true" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+            <state relative-caret-position="114">
+              <caret line="105" column="73" lean-forward="true" selection-start-line="105" selection-start-column="2" selection-end-line="105" selection-end-column="73" />
               <folding>
-                <element signature="e#23#32#0" expanded="true" />
+                <element signature="e#731#1105#0" />
+                <element signature="e#807#1105#0" />
+                <element signature="e#872#1105#0" />
+                <element signature="e#1164#1767#0" />
+                <element signature="e#1272#1767#0" />
+                <element signature="e#1439#1536#0" />
+                <element signature="e#1820#2272#0" />
+                <element signature="e#1915#2272#0" />
+                <element signature="e#2027#2272#0" />
+                <element signature="e#2152#4067#0" />
+                <element signature="e#4131#4256#0" />
+                <element signature="e#7347#8144#0" />
+                <element signature="e#7506#7632#0" />
+                <element signature="e#7547#7632#0" />
+                <element signature="e#7730#8144#0" />
+                <element signature="e#7768#8144#0" />
+                <element signature="e#7920#8144#0" />
+                <element signature="e#7980#8099#0" />
+                <element signature="e#8027#8099#0" />
+                <element signature="e#8182#8895#0" />
+                <element signature="e#8341#8467#0" />
+                <element signature="e#8382#8467#0" />
+                <element signature="e#8565#8895#0" />
+                <element signature="e#8603#8895#0" />
+                <element signature="e#8679#8895#0" />
+                <element signature="e#8735#8850#0" />
+                <element signature="e#8782#8850#0" />
+                <element signature="e#8932#9641#0" />
+                <element signature="e#9090#9216#0" />
+                <element signature="e#9131#9216#0" />
+                <element signature="e#9314#9641#0" />
+                <element signature="e#9352#9641#0" />
+                <element signature="e#9429#9641#0" />
+                <element signature="e#9483#9596#0" />
+                <element signature="e#9530#9596#0" />
+                <element signature="e#9686#10423#0" />
+                <element signature="e#9851#9977#0" />
+                <element signature="e#9892#9977#0" />
+                <element signature="e#10075#10423#0" />
+                <element signature="e#10113#10423#0" />
+                <element signature="e#10195#10423#0" />
+                <element signature="e#10257#10378#0" />
+                <element signature="e#10304#10378#0" />
+                <element signature="e#10459#11357#0" />
+                <element signature="e#10615#10741#0" />
+                <element signature="e#10656#10741#0" />
+                <element signature="e#10839#11357#0" />
+                <element signature="e#10839#10873#0" />
+                <element signature="e#11006#11357#0" />
+                <element signature="e#11135#11357#0" />
+                <element signature="e#11194#11312#0" />
+                <element signature="e#11241#11312#0" />
+                <element signature="e#11392#12155#0" />
+                <element signature="e#11548#11674#0" />
+                <element signature="e#11589#11674#0" />
+                <element signature="e#11772#12155#0" />
+                <element signature="e#11810#12155#0" />
+                <element signature="e#11933#12155#0" />
+                <element signature="e#11992#12110#0" />
+                <element signature="e#12039#12110#0" />
+                <element signature="e#12192#12910#0" />
+                <element signature="e#12350#12476#0" />
+                <element signature="e#12391#12476#0" />
+                <element signature="e#12574#12910#0" />
+                <element signature="e#12612#12910#0" />
+                <element signature="e#12688#12910#0" />
+                <element signature="e#12747#12865#0" />
+                <element signature="e#12794#12865#0" />
+                <element signature="e#13105#13231#0" />
+                <element signature="e#13146#13231#0" />
+                <element signature="e#11164#11334#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logout/DUSDKReport.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>BaseToolCmd</find>
+      <find>MyProgects</find>
+      <find>pathsour</find>
+      <find>filelistlog</find>
+      <find>reportPath</find>
+      <find>search</find>
+      <find>filename</find>
+      <find>libDXCaptcha</find>
+      <find>libDXRisk</find>
+      <find>DXSDKStr</find>
+      <find>writelines</find>
+      <find>app name ====&gt;</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>My</replace>
+      <replace>reportPath</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,6 +162,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/main_1.py" />
+        <option value="$PROJECT_DIR$/src/analysis_sdk_1.py" />
+        <option value="$PROJECT_DIR$/logout/DUSDKReport.txt" />
         <option value="$PROJECT_DIR$/src/main.py" />
       </list>
     </option>
@@ -65,8 +176,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-29" />
-    <option name="y" value="75" />
+    <option name="x" value="-97" />
+    <option name="y" value="-20" />
     <option name="width" value="1386" />
     <option name="height" value="715" />
   </component>
@@ -75,7 +186,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -86,12 +196,13 @@
             <path>
               <item name="SDK-Analysis" type="b2602c69:ProjectViewProjectNode" />
               <item name="SDK-Analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="logout" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -99,6 +210,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\My\Python\SDK-Analysis\src" />
+      <recent name="D:\My\Python\SDK-Analysis" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -111,6 +228,86 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="analysis_sdk_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SDK-Analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/analysis_sdk_1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SDK-Analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SDK-Analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main_1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.main_1" />
+      <item itemvalue="Python.analysis_sdk_1" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.analysis_sdk_1" />
+        <item itemvalue="Python.main_1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -125,31 +322,40 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24508321" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.68235296" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,12 +365,146 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logout/filelistlog.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/analysis_sdk_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logout/MobSDKReport.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logout/smSDKReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1858" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logout/TDSDKReport.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logout/wySDKReport.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logout/ygSDKReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logout/DXSDKReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5053">
+          <caret line="13305" column="104" selection-start-line="13305" selection-start-column="97" selection-end-line="13305" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logout/JPushSDKReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logout/UmengSDKReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2223" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logout/DUSDKReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="84" column="13" lean-forward="true" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+        <state relative-caret-position="114">
+          <caret line="105" column="73" lean-forward="true" selection-start-line="105" selection-start-column="2" selection-end-line="105" selection-end-column="73" />
           <folding>
-            <element signature="e#23#32#0" expanded="true" />
+            <element signature="e#731#1105#0" />
+            <element signature="e#807#1105#0" />
+            <element signature="e#872#1105#0" />
+            <element signature="e#1164#1767#0" />
+            <element signature="e#1272#1767#0" />
+            <element signature="e#1439#1536#0" />
+            <element signature="e#1820#2272#0" />
+            <element signature="e#1915#2272#0" />
+            <element signature="e#2027#2272#0" />
+            <element signature="e#2152#4067#0" />
+            <element signature="e#4131#4256#0" />
+            <element signature="e#7347#8144#0" />
+            <element signature="e#7506#7632#0" />
+            <element signature="e#7547#7632#0" />
+            <element signature="e#7730#8144#0" />
+            <element signature="e#7768#8144#0" />
+            <element signature="e#7920#8144#0" />
+            <element signature="e#7980#8099#0" />
+            <element signature="e#8027#8099#0" />
+            <element signature="e#8182#8895#0" />
+            <element signature="e#8341#8467#0" />
+            <element signature="e#8382#8467#0" />
+            <element signature="e#8565#8895#0" />
+            <element signature="e#8603#8895#0" />
+            <element signature="e#8679#8895#0" />
+            <element signature="e#8735#8850#0" />
+            <element signature="e#8782#8850#0" />
+            <element signature="e#8932#9641#0" />
+            <element signature="e#9090#9216#0" />
+            <element signature="e#9131#9216#0" />
+            <element signature="e#9314#9641#0" />
+            <element signature="e#9352#9641#0" />
+            <element signature="e#9429#9641#0" />
+            <element signature="e#9483#9596#0" />
+            <element signature="e#9530#9596#0" />
+            <element signature="e#9686#10423#0" />
+            <element signature="e#9851#9977#0" />
+            <element signature="e#9892#9977#0" />
+            <element signature="e#10075#10423#0" />
+            <element signature="e#10113#10423#0" />
+            <element signature="e#10195#10423#0" />
+            <element signature="e#10257#10378#0" />
+            <element signature="e#10304#10378#0" />
+            <element signature="e#10459#11357#0" />
+            <element signature="e#10615#10741#0" />
+            <element signature="e#10656#10741#0" />
+            <element signature="e#10839#11357#0" />
+            <element signature="e#10839#10873#0" />
+            <element signature="e#11006#11357#0" />
+            <element signature="e#11135#11357#0" />
+            <element signature="e#11194#11312#0" />
+            <element signature="e#11241#11312#0" />
+            <element signature="e#11392#12155#0" />
+            <element signature="e#11548#11674#0" />
+            <element signature="e#11589#11674#0" />
+            <element signature="e#11772#12155#0" />
+            <element signature="e#11810#12155#0" />
+            <element signature="e#11933#12155#0" />
+            <element signature="e#11992#12110#0" />
+            <element signature="e#12039#12110#0" />
+            <element signature="e#12192#12910#0" />
+            <element signature="e#12350#12476#0" />
+            <element signature="e#12391#12476#0" />
+            <element signature="e#12574#12910#0" />
+            <element signature="e#12612#12910#0" />
+            <element signature="e#12688#12910#0" />
+            <element signature="e#12747#12865#0" />
+            <element signature="e#12794#12865#0" />
+            <element signature="e#13105#13231#0" />
+            <element signature="e#13146#13231#0" />
+            <element signature="e#11164#11334#0" />
           </folding>
         </state>
       </provider>
