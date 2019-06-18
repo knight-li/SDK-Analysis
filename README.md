@@ -55,7 +55,7 @@
 
 项目中报告的路径如下：
 
-![输入图片说明](https://images.gitee.com/uploads/images/2019/0618/160651_8e6448e3_5083058.png "19BFC349-7D7D-41af-B55B-9D6F585A1E8C.png")
+ ![输入图片说明](https://images.gitee.com/uploads/images/2019/0618/203109_86568851_5083058.png "img_filelist .png")
 
 以 DUSDKReport 为例，内部结构如下：
 
