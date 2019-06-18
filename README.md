@@ -36,7 +36,7 @@
 
 输出文件如下：
 
-![1560767808636](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1560767808636.png)
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0618/160651_8e6448e3_5083058.png "19BFC349-7D7D-41af-B55B-9D6F585A1E8C.png")
 
 以 MobSDKReport 为例，内部结构如下：
 
