@@ -51,7 +51,9 @@
 
 ## 输出文件
 
-输出文件如下：
+报告输出以 SDK 为单位，打印集成 SDK 的应用包名（下载后的apk名称），这样可以更方便的看到对应 SDK 都被哪些 apk 所集成。
+
+项目中报告的路径如下：
 
 ![1560767808636](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1560767808636.png)
 
