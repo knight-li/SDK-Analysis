@@ -36,16 +36,40 @@
 
    ```Python
    # sdk feature
-   umengStr = "com.umeng"            #友盟 SDK
-   JGuangStr = "JAnalyticsInterface" #极光 SDK
-   getuiStr = "getui"                #个推 SDK
-   talkingDataStr = "TCAgent"        #TalkingData SDK
-   MobSDKStr = "MobSDK"              #Mob SDK
-   duSDKStr = "cn\shuzilm\core"      #数盟 SDK
-   smSDKStr = "SmAntiFraud"          #数美 SDK
-   ygSDKStr = "AnalysysAgent"        #易观方舟 SDK
-   wangyiStr = "watchman"            #网易易盾 SDK
+   # 友盟
+   umengStr = "com.umeng"
+   
+   # 极光
+   JAnalyStr = "JAnalyticsInterface"  # 极光统计
+   JPushStr = "JPushInterface"        # 极光推送
+   JMessageStr = "JMessageClient"     # 极光IM
+   JShareStr = "JShareInterface"      # 极光分享
+   
+   # 个推
+   GTStr = "getui"
+   GTStr_1 = "GTIntentService"
+   GTStr_2 = "GetuiPushService"
+   # 个数
+   GSStr_1 = 'GsManager '
+   GSStr_2 = 'GsConfig '
+   # 个像
+   GI = 'GInsightManager '
+   
+   # TalkingData
+   TalkingDataStr = "TCAgent"
+   # Mob
+   MobSDKStr = "MobSDK"
+   # 数盟
+   DUSDKStr = "cn\shuzilm\core"
+   # 数美
+   SMSDKStr = "SmAntiFraud"
+   # 易观方舟
+   YGSDKStr = "AnalysysAgent"
+   # 网易易盾
+   WANGYIStr = "watchman"
    ```
+
+***注意：***经分析，推送类 SDK 与大多数其他的分析类 SDK 不同，只是实现简单的发送和接受功能。而其他的sdk大多具备完整数据能力，因此对极光和个推的 SDK 类别做了区分。
 
 至此，我们可以开启 apk 解析之旅了，启动项目。
 
@@ -57,17 +81,15 @@
 
  ![输入图片说明](https://images.gitee.com/uploads/images/2019/0618/203109_86568851_5083058.png "img_filelist .png")
 
-以 DUSDKReport 为例，内部结构如下：
+以 JGSDKReport 为例，内部结构如下：
 
 ```
-<=================== 数盟 SDK 集成情况 ===================>
-app name ====> com.kuaikan.comic_5.40.0_540000
-app name ====> com.kuaikan.comic_5.40.0_540000
-app name ====> com.kuaikan.comic_5.40.0_540000
-app name ====> com.kuaikan.comic_5.40.0_540000
+<========================== 极光 SDK 集成情况 ===========================>
+app name ====> com.kuaikan.comic_5.40.0_540000   JPush SDK
+app name ====> com.kuaikan.comic_5.40.0_540000   JAnalytic SDK
 ```
 
-可根据自身需求修改输出格式。
+内容主要有APP名称，所集成的SDK名；可根据自身需求修改输出格式。
 
 ## 注意
 

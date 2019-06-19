@@ -10,16 +10,37 @@ baksmali = 'D:\\My\\Python\\SDK-Analysis\\baksmali.jar'
 BaseToolCmd = 'java -jar baksmali.jar d '
 
 # sdk feature
+# 友盟
 umengStr = "com.umeng"
-JGuangStr = "JAnalyticsInterface"
-getuiStr = "getui"
-talkingDataStr = "TCAgent"
+
+# 极光
+JAnalyStr = "JAnalyticsInterface"  # 极光统计
+JPushStr = "JPushInterface"        # 极光推送
+JMessageStr = "JMessageClient"     # 极光IM
+JShareStr = "JShareInterface"      # 极光分享
+
+# 个推
+GTStr = "getui"
+GTStr_1 = "GTIntentService"
+GTStr_2 = "GetuiPushService"
+# 个数
+GSStr_1 = 'GsManager '
+GSStr_2 = 'GsConfig '
+# 个像
+GI = 'GInsightManager '
+
+# TalkingData
+TalkingDataStr = "TCAgent"
+# Mob
 MobSDKStr = "MobSDK"
-duSDKStr = "cn\shuzilm\core"
-smSDKStr = "SmAntiFraud"
-ygSDKStr = "AnalysysAgent"
-wangyiStr = "watchman"
-dingXiangStr = "libDX"
+# 数盟
+DUSDKStr = "cn\shuzilm\core"
+# 数美
+SMSDKStr = "SmAntiFraud"
+# 易观方舟
+YGSDKStr = "AnalysysAgent"
+# 网易易盾
+WANGYIStr = "watchman"
 
 
 # 修改文件后缀（将 .apk 修改为 .zip）
@@ -84,7 +105,6 @@ def decompileDex(Path, appName):
 # 遍历查找 SDK 特征
 def checkSDKFeature(Path, fname, appName):
   mPath = Path + fname + "\\"
-  print(" checkSDKFuture ====> ", mPath)
   os.chdir(mPath)  # 切换到工作路径
   # 查找是否包含SDK
   searchSDK()
@@ -94,10 +114,8 @@ def checkSDKFeature(Path, fname, appName):
 
 # 将baksmali 文件拷贝到要反编译的文件夹下
 def copyBaksmaliToDir(pathtar):
-  print(pathtar)
   os.chdir(pathtar)
   cmdComand = "copy " + baksmali + " " + pathtar
-  print(cmdComand)
   os.system(cmdComand)
 
 
@@ -118,7 +136,6 @@ def searchUmengSDK():
 
       apath = os.path.join(maindir, filename)
       if umengStr in apath or 'UMConfigure' in apath or 'MobclickAgent' in apath or "com\\umeng" in apath:
-        print("filename ====> ", filename)
         print("umeng SDK ====> ", apath)
         try:
           with open(reportPath, 'a+') as fo:
@@ -130,7 +147,7 @@ def searchUmengSDK():
 
 # 查找极光 SDK
 def searchJPushSDK():
-  reportPath = "D:\\My\\Python\\SDK-Analysis\\logout\\JPushSDKReport.txt"  # 保存文件路径
+  reportPath = "D:\\My\\Python\\SDK-Analysis\\logout\\JGSDKReport.txt"  # 保存文件路径
   strLine = "<================================ 极光 SDK 集成情况 ================================>"
   try:
     with open(reportPath, 'a+') as fo:
@@ -143,14 +160,28 @@ def searchJPushSDK():
   for maindir, subdir, file_name_list in os.walk(pathsour):
     for filename in file_name_list:
       apath = os.path.join(maindir, filename)
-      if JGuangStr in apath or "libjcore" in apath or "JPushInterface" in apath or "libjpush" in apath:
+
+      str = None
+      if JAnalyStr in apath:
         print("JAnalytic SDK ====> ", apath)
+        str = '   JAnalytic SDK'
+      elif JPushStr in apath or "libjpush" in apath:
+        print("JPushStr SDK ====> ", apath)
+        str = '   JPush SDK'
+      elif JMessageStr in apath:
+        print("JMessageStr SDK ====> ", apath)
+        str = '   JMessage SDK'
+      elif JShareStr in apath:
+        print("JShareStr SDK ====> ", apath)
+        str = '   JShare SDK'
+
+      if str is not None:
         try:
           with open(reportPath, 'a+') as fo:
-            fo.writelines("app name ====> " + apath.split('\\')[5])
+            fo.writelines("app name ====> " + apath.split('\\')[5] + str)
             fo.write('\n')
         except:
-          pass  # 所以异常全部忽略即可
+          pass
 
 
 # 查找个推 SDK
@@ -168,14 +199,25 @@ def searchGeTuiSDK():
   for maindir, subdir, file_name_list in os.walk(pathsour):
     for filename in file_name_list:
       apath = os.path.join(maindir, filename)
-      if getuiStr in apath:
-        print("getui SDK ====> ", apath)
+      str = None
+
+      if GTStr in apath and GTStr_1 in apath or GTStr_2 in apath:
+        print("个推 SDK ====> ", apath)
+        str = '   个推 SDK'
+      elif GSStr_1 in apath or GSStr_2 in apath:
+        print("个数 SDK ====> ", apath)
+        str = '   个数 SDK'
+      elif GI in apath:
+        print("个像 SDK ====> ", apath)
+        str = '   个像 SDK'
+
+      if str is not None:
         try:
           with open(reportPath, 'a+') as fo:
-            fo.writelines("app name  ====> " + apath)
+            fo.writelines("app name ====> " + apath.split('\\')[5] + str)
             fo.write('\n')
         except:
-          pass  # 所以异常全部忽略即可
+          pass
 
 
 # 查找 MobSDK
@@ -218,7 +260,7 @@ def searchTDSDK():
   for maindir, subdir, file_name_list in os.walk(pathsour):
     for filename in file_name_list:
       apath = os.path.join(maindir, filename)
-      if talkingDataStr in apath:
+      if TalkingDataStr in apath:
         print("talkingData SDK ====> ", apath)
         try:
           with open(reportPath, 'a+') as fo:
@@ -241,13 +283,9 @@ def searchDUSDK():
   except:
     pass  # 所以异常全部忽略即可
   for maindir, subdir, file_name_list in os.walk(pathsour):
-    # print("maindir ====> ", maindir)
-    # print("subdir ====> ", subdir)
-    # print("file_name_list ====> ", file_name_list)
     for filename in file_name_list:
       apath = os.path.join(maindir, filename)
-      # if duSDKStr in apath or "libdu.so" in apath:
-      if duSDKStr in apath:
+      if DUSDKStr in apath:
         print("duSDKStr SDK ====> ", apath)
         try:
           with open(reportPath, 'a+') as fo:
@@ -272,7 +310,7 @@ def searchSMSDK():
   for maindir, subdir, file_name_list in os.walk(pathsour):
     for filename in file_name_list:
       apath = os.path.join(maindir, filename)
-      if smSDKStr in apath or "libsmsdk.so" in apath or "shumei" in apath:
+      if SMSDKStr in apath or "libsmsdk.so" in apath or "shumei" in apath:
         print("smSDKStr SDK ====> ", apath)
         try:
           with open(reportPath, 'a+') as fo:
@@ -297,7 +335,7 @@ def searchYGSDK():
   for maindir, subdir, file_name_list in os.walk(pathsour):
     for filename in file_name_list:
       apath = os.path.join(maindir, filename)
-      if ygSDKStr in apath:
+      if YGSDKStr in apath:
         print("ygSDKStr SDK ====> ", apath)
         try:
           with open(reportPath, 'a+') as fo:
@@ -322,7 +360,7 @@ def searchWYSDK():
   for maindir, subdir, file_name_list in os.walk(pathsour):
     for filename in file_name_list:
       apath = os.path.join(maindir, filename)
-      if wangyiStr in apath:
+      if WANGYIStr in apath:
         print("wangyiSDKStr SDK ====> ", apath)
         try:
           with open(reportPath, 'a+') as fo:
@@ -348,11 +386,12 @@ def searchSDK():
 def main():
   global pathsour
   # 先改变后缀为.zip
-  changename(pathsour)
-  # 解压 .zip 文件
-  for filename in os.listdir(pathsour):
-    decompression(filename, pathsour, pathsour)
+  # changename(pathsour)
+  # # 解压 .zip 文件
+  # for filename in os.listdir(pathsour):
+  #   decompression(filename, pathsour, pathsour)
 
+  # 解压完后续需要查找是可将前面部分注释掉，只调用查找方法即可
   searchSDK()
 
 
