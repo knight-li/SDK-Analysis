@@ -36,15 +36,15 @@
 
    ```Python
    # sdk feature
-   umengStr = "com.umeng"
-   JGuangStr = "JAnalyticsInterface"
-   getuiStr = "getui"
-   talkingDataStr = "TCAgent"
-   MobSDKStr = "MobSDK"
-   duSDKStr = "cn\shuzilm\core"
-   smSDKStr = "SmAntiFraud"
-   ygSDKStr = "AnalysysAgent"
-   wangyiStr = "watchman"
+   umengStr = "com.umeng"            #友盟 SDK
+   JGuangStr = "JAnalyticsInterface" #极光 SDK
+   getuiStr = "getui"                #个推 SDK
+   talkingDataStr = "TCAgent"        #TalkingData SDK
+   MobSDKStr = "MobSDK"              #Mob SDK
+   duSDKStr = "cn\shuzilm\core"      #数盟 SDK
+   smSDKStr = "SmAntiFraud"          #数美 SDK
+   ygSDKStr = "AnalysysAgent"        #易观方舟 SDK
+   wangyiStr = "watchman"            #网易易盾 SDK
    ```
 
 至此，我们可以开启 apk 解析之旅了，启动项目。
