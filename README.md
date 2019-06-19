@@ -79,7 +79,7 @@
 
 项目中报告的路径如下：
 
- ![输入图片说明](https://images.gitee.com/uploads/images/2019/0618/203109_86568851_5083058.png "img_filelist .png")
+ ![输入图片说明](https://images.gitee.com/uploads/images/2019/0619/164141_e2bcb265_5083058.png "6C659861-35C3-4dcc-887E-23CB42DD4B68.png")
 
 以 JGSDKReport 为例，内部结构如下：
 
